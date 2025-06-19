@@ -72,7 +72,7 @@ export default function ExampleComponent() {
   // ---------------------------------------
   // 7. 論理演算子 ||（左が falsy なら右を使う）
   // falsy は false, 0, "", null, undefined, NaN です。
-  const displayName = "" || "名無し";
+  // const displayName = "" || "名無し";
   const usernameFromObject = person.name || "ゲスト";
 
   // 8. 論理演算子 ??（null または undefined の場合のみ右を使う）
@@ -124,7 +124,7 @@ export default function ExampleComponent() {
       <p>スプレッドなし: {moreFruitsWithoutSpread.join(", ")}</p>
 
       <h2>7. 論理演算子 ||</h2>
-      <p>空文字に対するデフォルト: {displayName}</p>
+      {/* <p>空文字に対するデフォルト: {displayName}</p> */}
       <p>person.name || "ゲスト": {usernameFromObject}</p>
 
       <h2>8. 論理演算子 ??</h2>

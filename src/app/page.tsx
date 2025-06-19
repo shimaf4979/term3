@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.scss";
 import clsx from "clsx";
+import ClickButton from "@/components/ui/ClickButton";
 
 const OriginalRemainCount = 10;
 
@@ -10,10 +11,12 @@ const OriginalRemainCount = 10;
 const Page = () => {
   // クリック回数を管理するstate
   const [count, setCount] = useState(0);
+  const [isMaxClicked, setIsMaxClicked] = useState(false);
 
   // ボタンクリック時の処理を行う関数
   const handleButtonClick = () => {
     if (remainCount <= 0) {
+      setIsMaxClicked(true);
       return;
     }
     setCount((prev) => {
@@ -59,10 +62,25 @@ const Page = () => {
         >
           クリックする
         </button>
+        {/* <ClickButton onClick={handleButtonClick} nyaa="nyaa">
+          クリックする
+        </ClickButton>
+        <ClickButton onClick={handleButtonClick} nyaa="nyaa">
+          クリックする
+        </ClickButton>
+        <ClickButton onClick={handleButtonClick} nyaa="nyaa">
+          クリックする
+        </ClickButton> */}
       </div>
+
       {/* カウント表示エリア */}
 
-      <div className={styles["count-number"]}>
+      <div
+        className={clsx(
+          styles["count-number"],
+          isMaxClicked && styles.isMaxClicked
+        )}
+      >
         {/* 現在のカウント表示 */}
         <p>カウント→{count}</p>
         {/* カウントの2倍の値表示 */}
