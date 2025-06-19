@@ -1,0 +1,9 @@
+.clickButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  box-shadow: 1px 2px 2px;
+  border-radius: 20px;
+  &:hover {
+    background-color: rgb(179, 178, 177, 0.2);
+  }
+}

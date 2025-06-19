@@ -1,0 +1,15 @@
+.container {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+}
